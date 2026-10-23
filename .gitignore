@@ -1,0 +1,52 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Packaging and build output
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.python-version
+
+# Test, coverage and tool caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# DBSS run against this repository itself (scratch use; test fixtures use temp dirs)
+/dbss.config.json
+/.dbss/
+/sql/
