@@ -55,10 +55,10 @@ are yours to commit, or not.
 ## Why
 
 Any PostgreSQL project that keeps its schema in SQL migrations builds up dozens of
-them over time. To answer a simple
-question like *“which columns does `profiles` have, and which RLS policies protect
-it?”* you either read every `CREATE`, `ALTER` and `DROP` that ever touched it, or you
-dump the whole schema and search through it.
+them over time. To answer a simple question like *“which columns does `profiles`
+have, and which RLS policies protect it?”* you either read every `CREATE`, `ALTER`
+and `DROP` that ever touched it, or you dump the whole schema and search through
+it.
 
 DBSS keeps an always-current, per-object view of your schema next to your
 migrations. That makes the schema easy to:
@@ -69,6 +69,13 @@ migrations. That makes the schema easy to:
   on that table;
 - **hand to tools and teammates**: one small file per object, deterministic
   formatting.
+
+Unlike ORM-based or schema-first tools, DBSS works with the SQL migrations you
+already have. There's no new workflow to adopt and no second schema definition to
+maintain. It rebuilds the current database structure in an isolated local
+container and generates one organized SQL file per table, constraint, index,
+function, policy, trigger, type and grant. The schema becomes easy to explore,
+review and version-control, without connecting to a live database.
 
 ## Features
 
